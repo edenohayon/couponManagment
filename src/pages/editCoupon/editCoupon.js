@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useParams } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 
 import Form from '../../components/UI/forms/form/form';
@@ -9,7 +8,6 @@ import couponAction from '../../store/actions/couponAction'
 
 const EditCoupon = () => {
 
-    let history = useHistory();
 
     const couponId = useParams().couponId
     const dispatch = useDispatch()
@@ -56,7 +54,7 @@ const EditCoupon = () => {
     }
 
 
-    
+
 
 
     return (

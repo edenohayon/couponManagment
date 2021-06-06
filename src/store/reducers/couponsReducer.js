@@ -1,4 +1,4 @@
-import {UPDATE_COUPON} from '../actions/actionsTypes'
+import { UPDATE_COUPON } from '../actions/actionsTypes'
 
 
 const initialState = {
@@ -53,7 +53,6 @@ const initialState = {
 }
 
 const Coupons = (state = initialState, action) => {
-    console.log('dispatched', action)
     switch (action.type) {
         case UPDATE_COUPON: {
             let updatedCouponList = state.couponsList.map((prevCoupon) => {

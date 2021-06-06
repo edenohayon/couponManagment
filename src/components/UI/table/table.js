@@ -84,26 +84,7 @@ const Table = ({ tableHead, tableBody, clickHandler }) => {
                     })}
             </tbody>
         </table>
-        // </div>
-        // <div className="flex flex-col w-full text-secondary font-medium mx-auto">
-        //     <div className=" flex w-full bg-bgTableHeader px-8 py-4 ">
-        //         {tableHead?.map((title, index) => (
-        //             <span key={index} className="w-full">{title}</span>
-        //         ))}
-        //     </div>
-        //     <div className="divide-y divide-light-gray-400 text-left px-4">
-        //         {tableBody?.map((row, index) => (
-        //             <div key={index} className="flex w-full py-8 px-4">
-        //                 {Object.keys(row).map((col, colIndex) => (
-        //                     <span key={colIndex} className="w-full">
-        //                         {row[col]}
-        //                     </span>
-        //                 ))}
-        //             </div>
-        //         ))}
 
-        //     </div>
-        // </div>
     )
 }
 
