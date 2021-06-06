@@ -58,7 +58,7 @@ const Table = ({ tableHead, tableBody, clickHandler }) => {
                         return (
                             // Apply the row props
                             <tr
-                                className=""
+                                className="cursor-pointer"
                                 onClick={() => clickHandler(row.index)}
                                 {...row.getRowProps()}>
                                 <td className="w-12"></td>

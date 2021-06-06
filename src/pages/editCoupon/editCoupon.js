@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
+import {useHistory } from 'react-router-dom'
 
 import Form from '../../components/UI/forms/form/form';
 
@@ -8,6 +9,7 @@ import couponAction from '../../store/actions/couponAction'
 
 const EditCoupon = () => {
 
+    let history = useHistory();
 
     const couponId = useParams().couponId
     const dispatch = useDispatch()
@@ -51,6 +53,9 @@ const EditCoupon = () => {
         dispatch(couponAction.updateCoupon({ ...coupon, ...updatedFields }))
         // history.goBack()
         setCouponSaved(true)
+        setTimeout(() => {
+            history.goBack()
+        }, 2000);
     }
 
 
@@ -64,7 +69,7 @@ const EditCoupon = () => {
 
                 <div className="flex flex-col items-center pb-16">
                     <div className="w-2/3 bg-bgTableHeader p-3 rounded-lg">
-                        <Form formElements={couponForm} onSubmit={updateCoupon} submitBtnTitle={coupon ? 'Update coupon' : 'Save'}></Form>
+                        <Form formElements={couponForm} onSubmit={updateCoupon} submitBtnTitle='Update coupon'></Form>
 
                     </div>
                     {
