@@ -1,0 +1,17 @@
+:root {
+  --color-primary: #788094;
+  --color-secondary: #666f86;
+  --color-active: #52dabc;
+  --color-inactive: #ff5575;
+  --color-issued: #6845d7;
+  --color-CTA: #44d793;
+  --color-used: #ff395e;
+  --color-bgColor: #f2f5f7;
+  --color-bgTableHeader: #f6f7f8;
+  --color-pink: #ff3964;
+}
+
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
