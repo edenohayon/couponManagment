@@ -34,7 +34,7 @@ const Input = (props) => {
             break;
         case ('checkbox'):
             inputElement = <label className="inline-flex items-center mt-3 font-medium text-primary">
-                <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600" checked={props.value} onChange={props.changed} />
+                <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600" defaultChecked={props.value} onChange={props.changed} />
                 <span className="ml-2 text-gray-700">{props.elementConfig.placeholder}</span>
             </label>
             break;

@@ -35,7 +35,7 @@ const EditCoupon = () => {
                 type: 'text',
                 placeholder: 'Active'
             },
-            value: coupon ? coupon.active : false,
+            value: coupon && coupon.active === 'Active' ? true : false,
             validation: {
                 required: false
             },
