@@ -1,6 +1,7 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { motion } from 'framer-motion';
 
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
 import PrimaryButton from '../../components/UI/buttons/primaryButton'
@@ -70,7 +71,12 @@ const Home = () => {
 
 
     return (
-        <div className="h-full bg-bgColor px-24 py-16">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="h-full bg-bgColor px-24 py-16">
             <div className="bg-white rounded-lg shadow-sm">
 
                 <div className=" flex justify-between items-center px-16 py-10 ">
@@ -87,7 +93,7 @@ const Home = () => {
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

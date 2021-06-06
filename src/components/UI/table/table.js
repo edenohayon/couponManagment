@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 import { useTable } from 'react-table'
-
 const Table = ({ tableHead, tableBody, clickHandler }) => {
 
 
@@ -58,7 +57,7 @@ const Table = ({ tableHead, tableBody, clickHandler }) => {
                         return (
                             // Apply the row props
                             <tr
-                                className="cursor-pointer"
+                                className="cursor-pointer hover:bg-gray-50"
                                 onClick={() => clickHandler(row.index)}
                                 {...row.getRowProps()}>
                                 <td className="w-12"></td>

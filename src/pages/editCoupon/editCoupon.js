@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useParams } from "react-router-dom";
+import { motion } from 'framer-motion'
+import { useParams, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import {useHistory } from 'react-router-dom'
 
 import Form from '../../components/UI/forms/form/form';
 
@@ -9,7 +9,7 @@ import couponAction from '../../store/actions/couponAction'
 
 const EditCoupon = () => {
 
-    let history = useHistory();
+    let history = useHistory()
 
     const couponId = useParams().couponId
     const dispatch = useDispatch()
@@ -51,11 +51,12 @@ const EditCoupon = () => {
 
     const updateCoupon = (updatedFields) => {
         dispatch(couponAction.updateCoupon({ ...coupon, ...updatedFields }))
-        // history.goBack()
+
         setCouponSaved(true)
         setTimeout(() => {
             history.goBack()
-        }, 2000);
+        }, 750);
+
     }
 
 
@@ -63,7 +64,12 @@ const EditCoupon = () => {
 
 
     return (
-        <div className="h-screen bg-bgColor px-96 py-16">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="h-screen bg-bgColor px-96 py-16">
             <div className="bg-white  rounded-lg shadow-sm flex flex-col">
                 <span className="text-primary text-3xl font-medium px-16 py-10 ">Edit coupon</span>
 
@@ -79,7 +85,7 @@ const EditCoupon = () => {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 
